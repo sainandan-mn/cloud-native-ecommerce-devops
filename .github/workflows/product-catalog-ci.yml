@@ -27,6 +27,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t product-catalog:latest docker/
-
-
+          docker build \
+            -t product-catalog:latest \
+            -f docker/Dockerfile \
+            src/product-catalog
