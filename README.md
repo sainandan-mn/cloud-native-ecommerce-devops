@@ -1,40 +1,41 @@
 # Cloud-Native E-commerce DevOps Platform (AWS EKS + GitOps)
 
-This project demonstrates the implementation of end-to-end DevOps practices for a cloud-native e-commerce application using microservices architecture on AWS EKS.
+This repository showcases a hands-on DevOps implementation for a cloud-native e-commerce application built using a microservices architecture on AWS EKS.
 
-The focus of this repository is on DevOps, Infrastructure, CI/CD, and GitOps, with the Product Catalog service presented as a representative microservice.
+The primary focus of this project is **DevOps engineering** — covering containerization, CI/CD automation, Kubernetes orchestration, GitOps-based delivery, and Infrastructure as Code.  
+The **Product Catalog** service is used as a representative microservice to demonstrate the complete DevOps lifecycle end to end.
 
 ---
 
 ## Architecture Overview
 
-- Microservices-based e-commerce application
-- Containerized using Docker
-- Orchestrated using Kubernetes (EKS)
-- Infrastructure provisioned using Terraform
-- CI/CD implemented using GitHub Actions
+- Microservices-based application design
+- Containerized services using Docker
+- Kubernetes orchestration on Amazon EKS
+- Infrastructure provisioning using Terraform
+- CI pipelines implemented with GitHub Actions
 - GitOps-based continuous delivery using Argo CD
-- Secure external access using AWS Load Balancer and Route 53
+- Secure external access via AWS Load Balancer and Route 53
 
 ---
 
 ## Tech Stack
 
-Cloud & Infrastructure
+**Cloud & Infrastructure**
 - AWS (EKS, VPC, IAM, Load Balancer, Route 53)
 - Terraform
 
-Container & Orchestration
+**Container & Orchestration**
 - Docker
 - Kubernetes
 
-CI/CD & GitOps
+**CI/CD & GitOps**
 - GitHub Actions
 - Argo CD
 
-Application
+**Application**
 - Go (Product Catalog microservice)
-- gRPC
+- gRPC-based service communication
 
 ---
 
@@ -42,57 +43,13 @@ Application
 
 ```text
 cloud-native-ecommerce-devops/
-├── architecture/               # Architecture & CI/CD diagrams
+├── architecture/               # Architecture and CI/CD diagrams
 ├── src/
-│   └── product-catalog/        # Go microservice
-├── docker/                     # Dockerfile & docker-compose
+│   └── product-catalog/        # Product Catalog microservice (Go)
+├── docker/                     # Dockerfile and docker-compose
 ├── kubernetes/
 │   └── product-catalog/        # Kubernetes manifests
 ├── cicd/
-│   ├── github-actions/         # CI pipelines (reference)
-│   └── argocd/                 # GitOps application
-└── terraform/                  # EKS & VPC IaC
-
----
-
-## DevOps Workflow
-
-1. Code pushed to GitHub
-2. CI pipeline builds and pushes Docker image
-3. GitOps manifests updated
-4. Argo CD deploys to EKS
-5. Application exposed via AWS Load Balancer
-
----
-
-## Product Catalog Microservice
-
-- Go-based gRPC service
-- Dockerized and deployed on Kubernetes
-- Configured via environment variables
-- Resource limits applied for production readiness
-
----
-
-## Local Development
-
-cd docker
-docker-compose up --build
-
----
-
-## Key Highlights
-
-- Implemented Infrastructure as Code using Terraform
-- Built CI/CD pipelines using GitHub Actions
-- Implemented GitOps using Argo CD
-- Designed Kubernetes manifests with best practices
-- Worked with AWS networking components
-
----
-
-## Author
-
-Sai Nandan  
-Aspiring DevOps Engineer
-
+│   ├── github-actions/         # CI pipeline references
+│   └── argocd/                 # Argo CD GitOps application
+└── terraform/                  # Terraform IaC for EKS and VPC
