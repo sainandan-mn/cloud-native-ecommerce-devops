@@ -38,17 +38,20 @@ Application
 
 ---
 
-## Repository Structure
+## 📂 Repository Structure
 
+```text
 cloud-native-ecommerce-devops/
-├── architecture/
-├── src/product-catalog/
-├── docker/
-├── kubernetes/product-catalog/
+├── architecture/               # Architecture & CI/CD diagrams
+├── src/
+│   └── product-catalog/        # Go microservice
+├── docker/                     # Dockerfile & docker-compose
+├── kubernetes/
+│   └── product-catalog/        # Kubernetes manifests
 ├── cicd/
-│   ├── github-actions/
-│   └── argocd/
-└── terraform/
+│   ├── github-actions/         # CI pipelines (reference)
+│   └── argocd/                 # GitOps application
+└── terraform/                  # EKS & VPC IaC
 
 ---
 
