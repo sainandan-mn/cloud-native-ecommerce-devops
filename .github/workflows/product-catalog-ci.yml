@@ -1,0 +1,32 @@
+name: Product Catalog CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Build Go application
+        working-directory: src/product-catalog
+        run: |
+          go mod tidy
+          go build -o product-catalog
+
+      - name: Build Docker image
+        run: |
+          docker build -t product-catalog:latest docker/
+
+

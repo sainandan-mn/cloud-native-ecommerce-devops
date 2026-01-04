@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: product-catalog-config
+data:
+  PRODUCT_CATALOG_PORT: "8080"
+
