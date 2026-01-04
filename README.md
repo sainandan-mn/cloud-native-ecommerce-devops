@@ -1,4 +1,4 @@
-# Cloud-Native E-commerce DevOps Platform (AWS EKS + GitOps)
+# Cloud-Native E-commerce DevOps Platform 
 
 This repository showcases a hands-on DevOps implementation for a cloud-native e-commerce application built using a microservices architecture on AWS EKS.
 
